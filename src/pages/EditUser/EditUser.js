@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 import RoundButton from '../../components/RoundButton/RoundButton';
 import { withAuth } from '../../context/auth.context';
 
-
+// validators must be equal to backend
 const validators = {
   username: (value) => {
     let message;
     if(!value){
       message = 'Username is required';
     }
-
     return message;
   },
+
   photo: (value) => {
     let message;
     if(!value){
       message = 'Photo is required';
     } 
-
     return message;
   },
 }
@@ -45,7 +44,7 @@ class EditUser extends Component {
     Object.keys(this.state.fields).forEach(key => {
       uploadData.append(key, this.state.fields[key]);
     })
-
+    // uses edit that comes as props from context auth.context.js
     this.props.edit(uploadData);
   }
 
@@ -86,4 +85,5 @@ class EditUser extends Component {
   }
 }
 
+// connect with the context auth.context.js using withAuth()
 export default withAuth(EditUser);

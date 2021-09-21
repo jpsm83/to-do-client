@@ -46,6 +46,7 @@ class TodoList extends Component {
   }
 
   handleLogout = () => {
+    // uses logout that comes as props from context auth.context.js
     this.props.logout();
   }
 
@@ -68,4 +69,5 @@ class TodoList extends Component {
   }
 }
 
+// connect with the context auth.context.js using withAuth()
 export default withAuth(TodoList);

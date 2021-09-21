@@ -1,3 +1,5 @@
+// component that will manage the private routes - show or not depending if is loggedin
+
 import React from 'react'
 import { Redirect, Route } from 'react-router'
 import { withAuth } from '../../context/auth.context';
@@ -26,4 +28,5 @@ function PrivateRoute(routeProps) {
   )
 }
 
+// connect with the context auth.context.js using withAuth()
 export default withAuth(PrivateRoute);
