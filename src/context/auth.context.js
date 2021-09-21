@@ -92,7 +92,6 @@ class AuthProvider extends React.Component{
   }
 }
 
-
 // HOC - High Order Component that converts regular component into Consumer
 const withAuth = (WrappedComponent) => {
 
@@ -114,7 +113,6 @@ const withAuth = (WrappedComponent) => {
                 logout={logout}
                 edit={edit}
                 {...props}
-
               />
             )
           }
