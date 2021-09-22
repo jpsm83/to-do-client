@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import RoundButton from '../../components/RoundButton/RoundButton';
 import { withAuth } from '../../context/auth.context';
 
@@ -79,7 +80,11 @@ class Login extends Component {
         </div>
 
         <RoundButton type="submit">
-          Log in
+          Login
+        </RoundButton>
+
+        <RoundButton>
+          <Link to='/signup'>Signup</Link>
         </RoundButton>
       </form>
     )
